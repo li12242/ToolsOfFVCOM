@@ -45,13 +45,7 @@ write_FVCOM_obc(Mobj,casename)
 write_FVCOM_depth(Mobj,casename)
 
 %% show map
-figure
-patch('Vertices',[Mobj.x,Mobj.y],...
-    'Faces',Mobj.tri,...
-    'Cdata',Mobj.h,...
-    'edgecolor','k',...
-    'facecolor','interp');
-axis('equal','tight')
+FVCOM.PostProcess.draw_map(Mobj)
 hold on;
 plot(Mobj.x(Mobj.obc_nodes{1}), Mobj.y(Mobj.obc_nodes{1}), 'ro') % plot boundary
 

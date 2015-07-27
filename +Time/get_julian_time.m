@@ -1,13 +1,13 @@
 function time = get_julian_time(startTimeStr, endTimeStr, interval)
 % get modified julian time array
-% 
 % Input:
 %   startTime   - start time, .e.g '2014-01-01 00:00:00'
 %   endTime     - end time, .e.g '2014-04-01 00:00:00'
-%   interval    - hours of time interval, .e.g  interval = 1/24
+%   interval    - time interval, days, .e.g  interval = 1/24
 % Output:
 %   time    - real time dates, size [1 x ntime]
-%
+% Usages:
+%   time = get_julian_time(startStr, endStr, interval)
 
 timevec = datevec(startTimeStr);
 startTime = FVCOM.Time.greg2mjulian...

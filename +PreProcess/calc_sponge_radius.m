@@ -51,9 +51,13 @@ for i =1:length(Nlist)
     
     % Calculate the arc length (in degrees) between the node and its
     % neighbours
+    try 
     arclen = distance(Mobj.lat(Nlist(i)),Mobj.lon(Nlist(i)),...
         Mobj.lat(neighbours),Mobj.lon(neighbours));
-    
+    catch
+        i
+        error('error occures')
+    end
     % Convert from degrees to whole metres
     arclen = ceil(1000*deg2km(arclen));
     

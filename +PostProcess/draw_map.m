@@ -1,0 +1,13 @@
+function draw_map(Mobj)
+% draw two dimension map
+
+figure('color','w')
+
+patch('Vertices',[Mobj.x,Mobj.y],...
+    'Faces',Mobj.tri,...
+    'Cdata',Mobj.h,...
+    'edgecolor','k',...
+    'facecolor','interp');
+axis('equal','tight')
+
+end

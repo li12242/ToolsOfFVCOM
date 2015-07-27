@@ -71,9 +71,9 @@ end;
 %------------------------------------------------------------------------------
 
 % set field
-river_field = zeros(nTimes,nRivnodes);
+river_field = zeros(nRivnodes, nTimes);
 for i=1:nTimes
-	river_field(i,1:nRivnodes) = VarData(i);
+	river_field(1:nRivnodes,i) = VarData(i);
 end;
 
 
